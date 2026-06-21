@@ -388,6 +388,52 @@
     line-height: 1.6;
   }
 
+  /* ── COMMITTEE ── */
+  .committee-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 560px) {
+    .committee-grid { grid-template-columns: 1fr; }
+  }
+
+  .committee-card {
+    border: 1px solid rgba(176,26,26,0.25);
+    padding: 1.8rem 2rem;
+    background: rgba(176,26,26,0.04);
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+  }
+
+  .committee-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--red);
+  }
+
+  .committee-card:hover { border-color: var(--red); transform: translateY(-3px); }
+
+  .committee-role {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+
+  .committee-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+
   /* ── MEMBERSHIP ── */
   .membership-section {
     background: var(--black-mid);
@@ -575,6 +621,7 @@
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#weapons">Weapons</a></li>
     <li><a href="#membership">Membership</a></li>
+    <li><a href="#committee">Committee</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -707,6 +754,35 @@
   </div>
 </div>
 
+<!-- COMMITTEE -->
+<div id="committee">
+  <div class="weapons-outer">
+    <div class="reveal">
+      <p class="section-label">Leadership</p>
+      <h2>Committee</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="committee-grid reveal">
+      <div class="committee-card">
+        <div class="committee-role">Club Owner</div>
+        <div class="committee-name">Fiona Higgins</div>
+      </div>
+      <div class="committee-card">
+        <div class="committee-role">Head Grading Official</div>
+        <div class="committee-name">Brendan O'Malley</div>
+      </div>
+      <div class="committee-card">
+        <div class="committee-role">CWPA / AWPS</div>
+        <div class="committee-name">Fiona Higgins</div>
+      </div>
+      <div class="committee-card">
+        <div class="committee-role">Committee</div>
+        <div class="committee-name">TBC</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CONTACT -->
 <div class="contact-section" id="contact">
   <div class="contact-inner">
@@ -715,7 +791,7 @@
       <h2>Begin Your Journey</h2>
       <div class="rule" style="margin: 0 auto 2rem;"></div>
       <p>Interested in joining Bosaika Club? We'd love to hear from you. Drop us an email and one of our coaches will be in touch to tell you more about sessions, location, and how to get started.</p>
-      <a href="mailto:fiona.highins01@gmail.com" class="contact-email">fiona.highins01@gmail.com</a>
+      <a href="mailto:fiona.higgins01@googlemail.com" class="contact-email">fiona.higgins01@googlemail.com</a>
       <p class="contact-note">All enquiries welcome — no weapons experience required, just karate.</p>
     </div>
   </div>
